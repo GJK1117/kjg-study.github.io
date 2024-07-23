@@ -3,60 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5.3.3 Sidebar Layout</title>
+    <title>Bootstrap 5.3.3 Layout</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
+            background-color: #111;
+            color: #fff;
         }
-        #sidebar {
-            min-width: 250px;
-            max-width: 250px;
-            background: #343a40;
-            color: white;
-            height: 100vh;
+        .navbar-brand {
+            font-weight: bold;
         }
-        .sidebar-link {
-            color: white;
+        .navbar-nav .nav-link {
+            color: #fff;
         }
-        .sidebar-link:hover {
-            color: #f8f9fa;
-            text-decoration: none;
+        .navbar-nav .nav-link:hover {
+            color: #ddd;
         }
-        .main-content {
-            flex: 1;
-            padding: 20px;
+        .content-section {
+            margin-top: 30px;
+        }
+        .content-section img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.25rem;
         }
     </style>
 </head>
 <body>
-    <div class="d-flex">
-        <div id="sidebar" class="d-flex flex-column p-3">
-            <h2>Sidebar</h2>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a href="#" class="nav-link sidebar-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link sidebar-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link sidebar-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link sidebar-link">Contact</a>
-                </li>
-            </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Themebau.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-dark ms-2" href="#">purchase</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="main-content flex-grow-1">
-            <h1>Main Content Area</h1>
-            <p>This is the main content area. Add your content here.</p>
+    </nav>
+    
+    <!-- Content Sections -->
+    <div class="container content-section">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Main Home">
+                <div class="section-title">Main Home</div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Simple Portfolio">
+                <div class="section-title">Simple Portfolio</div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Creative Agency">
+                <div class="section-title">Creative Agency</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Another Project">
+                <div class="section-title">Another Project</div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Yet Another Project">
+                <div class="section-title">Yet Another Project</div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://via.placeholder.com/600x400" alt="Final Project">
+                <div class="section-title">Final Project</div>
+            </div>
         </div>
     </div>
-    
+
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
